@@ -1,0 +1,208 @@
+<app-header></app-header>
+
+<div class="location-select-wrap">
+    <div class="location-select">
+      <div class="pill">
+        <span class="icon">📍</span>
+        <select [(ngModel)]="selectFromCity" (change)="getTocityList()">
+          <option value="" disabled selected>Source</option>
+          <option *ngFor="let city of cityListObj" [ngValue]="city">
+            {{ city.CM_CityNameWithStateName }}
+          </option>
+        </select>
+      </div>
+  
+      <button class="swap-btn" >
+        🔁
+      </button>
+  
+      <div class="pill">
+        <span class="icon">📍</span>
+        <select [(ngModel)]="selectedTocity">
+          <option value="" disabled selected>Destination</option>
+          <option *ngFor="let city of tocityListObj" [ngValue]="city">
+            {{ city.CM_CityNameWithStateName }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+  
+
+
+<!-- 
+<select *ngIf="cityListObj?.length"
+        class="form-control"
+        [(ngModel)]="selectFromCity"
+        id="FromCt"
+        name="cityListObj"
+        (ngModelChange)="getTocityList()">
+        
+  <option selected>Select From City</option>
+  
+  <option *ngFor="let city of cityListObj" [ngValue]="city.CM_CityID">
+    {{ city.CM_CityNameWithStateName }}
+  </option>
+</select>
+
+<select
+    class="form-control"
+    [(ngModel)]="selectedTocity"
+    id="TocT"
+>
+    <option selected>To City List</option>
+    <option *ngFor="let Tocity of tocityListObj" [ngValue]="Tocity.CM_CityID"> {{ Tocity.CM_CityNameWithStateName }}</option>
+</select> -->
+
+
+
+    
+
+<!-- 
+<section className="hero">
+    <div className="maxwidth">
+        <div className="dphero">
+            <div className="bannerwrapper">
+
+                <div className="sliderwrapper">
+                    <div aria-label="Gallery">
+                        <div className="carousel" data-carousel>
+                            <ul data-slides>
+                                <li className="slide active fade" data-active>
+                                    <img src="IIPL/slider/images/site/slider2.jpg" />
+                                </li>
+                                <li className="slide fade">
+                                    <img src="IIPL/slider/images/site/slider1.jpg" />
+                                </li>
+                            </ul>
+                            <span className="arrow left" data-button="left">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <g opacity="0.4">
+                                        <rect x="0.5" y="39.5" width="39" height="39" rx="3.5" transform="rotate(-90 0.5 39.5)" stroke="white" />
+                                        <path d="M23 14L17 20L23 26" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                    </g>
+                                </svg>
+                            </span>
+                            <span className="arrow right" data-button="right">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                    <g opacity="0.4">
+                                        <rect x="-0.5" y="-0.5" width="39" height="39" rx="3.5" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 39 39)" stroke="white" />
+                                        <path d="M17 14L23 20L17 26" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                    </g>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div className="herosection">
+                <div className="bookoffer">
+                    <div className="bookingwrapper">
+                        <div className="container">
+                            <div className="bookingform">
+                                <div className="bookingcity">
+                                    <div className="bookingpart">
+                                        <label>From</label>
+                                        <div className="bookinginput bookingtocity">
+                                            <Autocomplete
+                                                id="FromCity"
+                                                autoHighlight
+                                                value={cityObj.fromCity}
+                                                options={cityList}
+                                                sx={{ width: 190 }}
+                                                onChange={(e, n) => { ddlCityChange(e, n, 'fromCity') }}
+                                                error="true"
+                                                renderOption={(props, option) => (
+                                                    <Box component="li" {...props} key={option.value}>
+                                                        {option.label}
+                                                    </Box>
+                                                )}
+                                                renderInput={(params) => <TextField {...params} label="" variant="standard" placeholder="Select from city" />}
+                                            />
+                                            <span className="redclr" id="spanFromCity" style={{ display: 'none', color: 'red' }}>Please Select From City</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="cityswapicon" onClick={() => { Swap_City('fromCity', 'toCity') }}>
+                                        &nbsp;
+                                    </div>
+
+                                    <div className="bookingpart bookingpart02">
+                                        <label>To</label>
+                                        <div className="bookinginput bookingromcity">
+                                            <Autocomplete
+                                                open={open}
+                                                onOpen={() => setOpen(true)}
+                                                onClose={() => setOpen(false)}
+                                                disablePortal
+                                                id="ToCity"
+                                                autoHighlight
+                                                value={cityObj.toCity}
+
+                                                options={toCityList}
+                                                sx={{ width: 190 }}
+                                                onChange={(e, n) => { ddlCityChange(e, n, 'toCity') }}
+                                                renderOption={(props, option) => (
+                                                    <Box component="li" {...props} key={option.value}>
+                                                        {option.label}
+                                                    </Box>
+                                                )}
+                                                renderInput={(params) => <TextField {...params} label="" variant="standard" placeholder="Select to city" />}
+                                            />
+                                            <span className="redclr" id="spanToCity" style={{ display: 'none', color: 'red' }}>Please select Destination</span>
+                                            <span className="redclr" id="spanInvToCity" style={{ display: 'none', color: 'red' }}>Invalid Destination Selection</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="bookingcity bookingdate">
+                                    <div className="bookingpart bookingpart03">
+                                        <label>Journey Date</label>
+                                        <div className="bookinginput bookingtodate">
+                                            <input
+                                                type="text"
+                                                id="txtFromDate"
+                                                ref={Journydate}
+                                                className="date txtDateTime"
+                                                placeholder="Departing"
+                                                autoComplete="off"
+                                                readOnly={true}
+                                            />
+                                            <span className="redclr" id="spanFromDate" style={{ display: 'none', color: 'red' }}>Please Select Journy Date</span>
+                                            <span className="redclr" id="spanValidFromDate" style={{ display: 'none', color: 'red' }}>Please Select Valid Journy Date</span>
+
+                                        </div>
+                                    </div>
+
+                                    {/*{cityObj.tripType == 1 &&*/}
+                                    {/*    <>*/}
+                                    <div className="bookingpart bookingpart04">
+                                        <label>Return Date</label>
+                                        <div className="bookinginput bookingfromdate">
+                                            <input type="text"
+                                                id="txtToDate"
+                                                ref={Journydate}
+                                                className="date txtDateTime"
+                                                placeholder="Return Date"
+                                                autoComplete="off"
+                                            />
+                                            <span className="redclr" id="spanValidFromDate" style={{ display: 'none', color: 'red' }}>Please Select Valid From Date</span>
+                                            <span className="redclr" id="spanValidToDate" style={{ display: 'none', color: 'red' }}>Please Select Valid Journy Date</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="bookingsearch">
+                                    <button type="button" className="searchbtn" onClick={searchRoutes}>Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->

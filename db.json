@@ -1,0 +1,105 @@
+{
+    "GetSources_B2C": [
+        {
+            "CM_CityID": 9292,
+            "CM_CityName": " Piluda",
+            "SM_StateID": 9,
+            "CM_CityNameWithStateName": " Piluda (Gujarat)"
+        },
+        {
+            "CM_CityID": 6418,
+            "CM_CityName": "16 No bus stop",
+            "SM_StateID": 17,
+            "CM_CityNameWithStateName": "16 No bus stop (Maharashtra)"
+        },
+        {
+            "CM_CityID": 3755,
+            "CM_CityName": "Aagariya",
+            "SM_StateID": 9,
+            "CM_CityNameWithStateName": "Aagariya (Gujarat)"
+        },
+        {
+            "CM_CityID": 13181,
+            "CM_CityName": "Aahur",
+            "SM_StateID": 25,
+            "CM_CityNameWithStateName": "Aahur (Rajasthan)"
+        },
+       
+        {
+            "CM_CityID": 4008,
+            "CM_CityName": "Viramgam",
+            "SM_StateID": 9,
+            "CM_CityNameWithStateName": "Viramgam (Gujarat)"
+        },
+        {
+            "CM_CityID": 736,
+            "CM_CityName": "Virar",
+            "SM_StateID": 17,
+            "CM_CityNameWithStateName": "Virar (Maharashtra)"
+        },
+        {
+            "CM_CityID": 2167,
+            "CM_CityName": "Virpur",
+            "SM_StateID": 9,
+            "CM_CityNameWithStateName": "Virpur (Gujarat)"
+        },
+        {
+            "CM_CityID": 2633,
+            "CM_CityName": "Visavadar",
+            "SM_StateID": 9,
+            "CM_CityNameWithStateName": "Visavadar (Gujarat)"
+        },
+        {
+            "CM_CityID": 9084,
+            "CM_CityName": "Vondh",
+            "SM_StateID": 9,
+            "CM_CityNameWithStateName": "Vondh (Gujarat)"
+        },
+        {
+            "CM_CityID": 6087,
+            "CM_CityName": "Wakad",
+            "SM_StateID": 17,
+            "CM_CityNameWithStateName": "Wakad (Maharashtra)"
+        },
+        {
+            "CM_CityID": 103,
+            "CM_CityName": "Wankaner",
+            "SM_StateID": 9,
+            "CM_CityNameWithStateName": "Wankaner (Gujarat)"
+        },
+        {
+            "CM_CityID": 2893,
+            "CM_CityName": "Wankaner",
+            "SM_StateID": 9,
+            "CM_CityNameWithStateName": "Wankaner (Gujarat)"
+        },
+        {
+            "CM_CityID": 9760,
+            "CM_CityName": "Yavat",
+            "SM_StateID": 17,
+            "CM_CityNameWithStateName": "Yavat (Maharashtra)"
+        },
+        {
+            "CM_CityID": 743,
+            "CM_CityName": "Yeola",
+            "SM_StateID": 17,
+            "CM_CityNameWithStateName": "Yeola (Maharashtra)"
+        },
+        {
+            "CM_CityID": 9461,
+            "CM_CityName": "zahirabad",
+            "SM_StateID": 59,
+            "CM_CityNameWithStateName": "zahirabad (Telangana)"
+        },
+        {
+            "CM_CityID": 7155,
+            "CM_CityName": "Zalki",
+            "SM_StateID": 14,
+            "CM_CityNameWithStateName": "Zalki (Karnataka)"
+        }
+    ],
+    
+  "profile": {
+    "name": "typicode"
+  }
+}

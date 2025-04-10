@@ -1,0 +1,54 @@
+.location-select-wrap {
+    background: #e0f7fa; /* Aqua background */
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .location-select {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .pill {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pill select {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .pill .icon {
+    font-size: 18px;
+    color: #3f51b5; /* Indigo icon */
+  }
+  
+  .swap-btn {
+    background-color: #3f51b5; /* Indigo */
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .swap-btn:hover {
+    transform: rotate(180deg);
+  }
+  
